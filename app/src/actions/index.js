@@ -8,7 +8,7 @@ export const getDog = () => (dispatch) => {
   dispatch({ type: FETCH_DOG_START });
 
   axios
-    .get("https://dog.ceo/api/breed/shiba/images/random")
+    .get("https://dog.ceo/api/breed/shiba/images")
     .then((res) => {
       console.log(res);
 
@@ -22,4 +22,21 @@ export const getDog = () => (dispatch) => {
         payload: `${err.response.message} with response code ${err.response.code}`,
       });
     });
+
+
+    // axios
+    // .get("https://dog.ceo/api/breed/shiba/images/random")
+    // .then((res) => {
+    //   console.log(res);
+
+    //   dispatch({ type: FETCH_DOG_SUCCESS, payload: res.data.message });
+    // })
+    // .catch((err) => {
+    //   console.log(err);
+
+    //   dispatch({
+    //     type: FETCH_DOG_FAILURE,
+    //     payload: `${err.response.message} with response code ${err.response.code}`,
+    //   });
+    // });
 };

@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Card style={{backgroundColor: '#43e0d9'}}>
-        <h1>Dogs World</h1>
+        <h1>Dogs World 🐕</h1>
       </Card>
       <CuteDogs />
     </div>
